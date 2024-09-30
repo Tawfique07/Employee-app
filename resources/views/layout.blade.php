@@ -32,7 +32,7 @@
       <!-- TODO: Here goes your content! -->
 
     <div class="container">
-        @yield('page-content');
+        @yield('page-content')
     </div>
 
     <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->

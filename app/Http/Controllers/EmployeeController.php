@@ -21,7 +21,7 @@ class EmployeeController extends Controller
      */
     public function create()
     {
-        //
+        return view('employee.create');
     }
 
     /**
@@ -29,7 +29,19 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $employee = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'nullable|email|unique:employees,email',
+            'joining_date' => 'required|date',
+            'mobile_no' => 'required|string|unique:employees,mobile_no',
+            'salary' => 'required|numeric|min:0',
+            'address' => 'required|string',
+            'job_title' => 'required|string|max:255'
+        ]);
+
+        Employee::create($employee);
+
+        return redirect()->route('employee.index')->with('message', 'employee created successfully');
     }
 
     /**

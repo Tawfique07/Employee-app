@@ -28,4 +28,6 @@
 </table>
 {{$employees->links()}}
 
+
+<a href={{route('employee.create')}} class="btn btn-success">Add New Employee</a>
 @endsection
