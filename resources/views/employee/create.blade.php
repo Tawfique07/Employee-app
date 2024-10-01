@@ -12,7 +12,7 @@
       class="form-control"
       id="name"
       name="name"
-      value={{old("name")}}
+      value='{{old("name")}}'
       >
       @error('name')
             <span class="text-danger">{{ $message }}</span>
@@ -26,7 +26,7 @@
         class="form-control"
         id="email"
         name="email"
-        value={{old("email")}}
+        value='{{old("email")}}'
         >
         @error('email')
             <span class="text-danger">{{ $message }}</span>
@@ -40,7 +40,7 @@
           class="form-control"
           id="job_title"
           name="job_title"
-          value={{old("job_title")}}
+          value='{{old("job_title")}}'
           >
         @error('job_title')
             <span class="text-danger">{{ $message }}</span>
@@ -55,7 +55,7 @@
           class="form-control"
           id="salary"
           name="salary"
-          value={{old("salary")}}
+          value='{{old("salary")}}'
           >
 
         @error('salary')
@@ -70,7 +70,7 @@
           class="form-control"
           id="address"
           name="address"
-          value={{old("address")}}
+          value='{{old("address")}}'
           >
 
         @error('address')
@@ -85,7 +85,7 @@
           class="form-control"
           id="mobile_no"
           name="mobile_no"
-          value={{old("mobile_no")}}
+          value='{{old("mobile_no")}}'
           >
         @error('mobile_no')
           <span class="text-danger">{{ $message }}</span>
@@ -99,7 +99,7 @@
           class="form-control"
           id="joining_date"
           name="joining_date"
-          value={{old("joining_date")}}
+          value='{{old("joining_date")}}'
           >
         @error('joining_date')
             <span class="text-danger">{{ $message }}</span>

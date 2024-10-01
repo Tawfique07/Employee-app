@@ -21,17 +21,18 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand">Navbar</a>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+          <a class="navbar-brand" href="{{route('employee.index')}}">Home</a>
+          <form class="d-flex" method="POST" action="{{route('employee.search')}}">
+            @csrf
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            <button class="btn btn-outline-success mx-2" type="submit">Search</button>
           </form>
         </div>
     </nav>
 
       <!-- TODO: Here goes your content! -->
 
-    <div class="container">
+    <div class="container my-5">
         @yield('page-content')
     </div>
 
